@@ -4,6 +4,7 @@ class MyLinkedList:
 
     def __init__(self, head=None):
         self.head = head
+        self.prev = None
         self.nextval = None
 
     def get(self, index: int) -> int:
@@ -13,7 +14,7 @@ class MyLinkedList:
                 return -1
             else:
                 n = n.nextval
-        if n.head is None: 
+        if n.head is None:
             return -1
         return n.head if n else -1
 
@@ -33,6 +34,7 @@ class MyLinkedList:
             while n.nextval:
                 n = n.nextval
             n.nextval = newTail
+
 
     def addAtIndex(self, index: int, val: int) -> None:
         if index == 0:
