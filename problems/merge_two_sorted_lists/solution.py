@@ -1,11 +1,10 @@
 # Definition for singly-linked list.
 # class ListNode:
-#     def __init__(self, val=0, next=None):
+#     def __init__(self, val=0: int, next=None: Optional[ListNode]):
 #         self.val = val
 #         self.next = next
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
-        result = ListNode()
         
         result = []
         while list1 and list2:
@@ -21,8 +20,7 @@ class Solution:
             res = ListNode(val=i,next=res)
 
         return res
+    
 
-
-# ListNode(val=1, next=ListNode(val=2, next=ListNode(val=4)))
 
     
